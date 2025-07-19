@@ -1,11 +1,9 @@
 name: Testing Pipeline
-
 on:
   push:
     branches: [ test_branch ]
   pull_request:
     branches: [ test_branch ]
-
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -25,4 +23,4 @@ jobs:
     
     - name: Run tests
       run: |
-        python -m pytest tests/test_train.py -v
+        python -m pytest tests/ -v

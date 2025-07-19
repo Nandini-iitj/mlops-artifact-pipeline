@@ -1,11 +1,9 @@
 name: Training Pipeline
-
 on:
   push:
     branches: [ classification_branch ]
   pull_request:
     branches: [ classification_branch ]
-
 jobs:
   train:
     runs-on: ubuntu-latest
@@ -25,8 +23,7 @@ jobs:
     
     - name: Run training
       run: |
-        cd src
-        python train.py
+        python src/train.py
     
     - name: Upload model artifact
       uses: actions/upload-artifact@v4
