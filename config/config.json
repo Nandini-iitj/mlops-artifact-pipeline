@@ -1,0 +1,6 @@
+{
+    "C": 1.0,
+    "solver": "lbfgs",
+    "max_iter": 5000,
+    "random_state": 42
+}
